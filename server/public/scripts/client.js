@@ -44,6 +44,7 @@ function refreshBooks() {
   }).catch(function(error){
     console.log('error in GET', error);
   });
+
 }
 
 
@@ -58,6 +59,7 @@ function renderBooks(books) {
       <tr>
         <td>${book.title}</td>
         <td>${book.author}</td>
+        <td><button data-id"${book.id}" class="removeButton">Remove Book</button></td>
       </tr>
     `);
   }
